@@ -8,7 +8,7 @@ public class ConfigDataProvider {
 Properties pro;
 
 public ConfigDataProvider() {
-	File src = new File("D:\\Ramakrishna -eclipseworkspace\\Automation_Testing\\OrangeHRMProject\\Configuration\\config.properties");
+	File src = new File("./Configuration/config.properties");
 	
 	try {
 		FileInputStream fis = new FileInputStream(src);
@@ -21,7 +21,7 @@ public ConfigDataProvider() {
 	public String getBrowser() {
 		return pro.getProperty("browser");
 	}
-	public String getStringUrl() {
+	public String getStagingUrl() {
 		return pro.getProperty("testurl");
 	}
 }

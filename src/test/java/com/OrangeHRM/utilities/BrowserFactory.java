@@ -12,13 +12,14 @@ public class BrowserFactory {
 	public static WebDriver startApplication(WebDriver driver,String browserName,String appUrl) {
 		
 		if(browserName.equals("Chrome")) {
-			System.setProperty("webdriver.chrome.driver","D:/Ramakrishna -eclipseworkspace/Automation_Testing/PracticingAutomationTesting/Drivers/chromedriver.exe" );
+			System.setProperty("webdriver.chrome.driver","./Drivers/chromedriver.exe");
 			ChromeOptions co=new ChromeOptions();
+			co.setBinary("./Drivers/chromedriver.exe");
 			co.addArguments("-- remote allow origin");
 			driver = new ChromeDriver(co);
 		}
 		else if (browserName.equals("Edge")) {
-			System.setProperty("webdriver.chrome.driver", "D:\\Ramakrishna -eclipseworkspace\\Automation_Testing\\OrangeHRMProject\\Drivers\\msedgedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "./Drivers/msedgedriver.exe");
 			driver = new EdgeDriver();
 		}
 		else
