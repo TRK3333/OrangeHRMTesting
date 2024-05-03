@@ -17,9 +17,10 @@ public class BrowserFactory {
 			co.setBinary("./Drivers/chromedriver.exe");
 			co.addArguments("-- remote allow origin");
 			driver = new ChromeDriver(co);
+//			driver = new ChromeDriver();
 		}
 		else if (browserName.equals("Edge")) {
-			System.setProperty("webdriver.chrome.driver", "./Drivers/msedgedriver.exe");
+			System.setProperty("webdriver.edge.driver", "./Drivers/msedgedriver.exe");
 			driver = new EdgeDriver();
 		}
 		else
